@@ -1,0 +1,31 @@
+body {
+  // COLORS
+  --c-brand: #CF1124;
+  --c-sec: #8c2c58;
+
+  --bg-main: #2b2236;
+  --c-txt: #434f58;
+  --c-txt-100: #F0F4F8;
+  --c-txt-300: #BCCCDC;
+
+  --c-silver: #f2edf5;
+
+  --title-opacity: 0.6;
+  --border-main: #463368;
+  // RGB variations: for hover effects for example
+  --c-brand--rgb: 47, 55, 114;
+  --c-sec--rgb: 140, 44, 88;
+  --c-txt--rgb: 67, 79, 88;
+  --c-silver--rgb: 242, 237, 245;
+
+  --vh100: calc(var(--vh, 1vh) * 100);
+
+  // FONTS
+  --font-titles: 'Lato', sans-serif;
+  --font-def: 'Open Sans', sans-serif;
+
+  // OTHER
+  --main-gutter--right: 3em;
+  --main-gutter--left: 3em;
+
+}

@@ -1,0 +1,31 @@
+{var $current_product = wc_get_product()}
+
+	<article class="product-list-card">
+		<a 
+			href="{the_permalink()}" 
+			class="product-list-card__thumb h-bg-zoom"
+		>
+			<div class="lds-ripple"><div></div><div></div></div>
+      {var $product_list_card_img = get_the_post_thumbnail_url($current_product->ID, 'card-thumb')}
+	  {* {var $product-list_card_img = wp_get_attachment_url( $current_product->get_image_id() )} *}
+	  {* {dump($product-list_card_img)} *}
+	  <img src="{$product_list_card_img}" class="product-list-card__thumb__img h-bg-zoom__img">
+			{* <div 
+				class="product-list-card__thumb__img h-bg-zoom__img" 
+				style="background-image: url('{$product-list_card_img}')"></div> *}
+		</a>
+		<div class="product-list-card__txt">
+			<h4 class="product-list-card__title">
+				<a href="{the_permalink()}">
+					{the_title()}
+				</a>
+			</h4>
+			<p class="entry-meta">
+        		{$current_product->get_attribute('författare')}
+			</p>
+			<p class="product-list-card__excerpt">
+				{get_the_excerpt(140)}
+			</p>
+			{get_the_category_list()|noescape}
+		</div> <!-- txt -->
+	</article>

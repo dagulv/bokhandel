@@ -1,0 +1,49 @@
+{
+  "block_meta": {
+    "BLOCK_REGISTER_NAME": "sidebar",
+    "BLOCK_TITLE": "Sidebar",
+    "keywords": [
+      "sidebar",
+      "böcker"
+    ],
+    "hasSidebar": true,
+    "hasExample": true
+  },
+  "attributes": {
+    "products": {
+      "type": "array",
+      "field_meta": {
+        "type": "repeater",
+        "label": "Produkter",
+        "subfields": {
+          "title": {
+            "type": "object",
+            "field_meta": {
+              "type": "text",
+              "label": "Titel"
+            },
+            "default": {
+              "text": ""
+            }
+          },
+          "product": {
+            "type": "object",
+            "field_meta": {
+              "type": "object_selector",
+              "object_type": "product",
+              "objects": ["product_cat"],
+              "placeholder": "Välj kategori",
+              "selected_object_label": "Vald kategori",
+              "label": "Produkt"
+            },
+            "default": {
+              "id": null,
+              "title": ""
+            }
+          }
+        }
+      },
+      "default": []
+      }
+  }
+}

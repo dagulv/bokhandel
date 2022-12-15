@@ -1,0 +1,28 @@
+<aside
+  n:foreach="$products as $product"
+  class="sidebar"
+> 
+  {var $customProducts = new WP_Query(
+  array(
+    'post_type'             => 'product',
+    'post_status'           => 'publish',
+    'tax_query'             => array(
+        array(
+            'taxonomy'      => 'product_cat',
+            'terms'         => $product['product']['id']
+        )
+    )
+))}
+  <section class="widget card">
+    <div class="card__header">
+      <h3 n:ifcontent class="title italized no-space">{$product['title']['text']}</h3>
+    </div>
+    {while $customProducts->have_posts()}
+      {$customProducts->the_post()}
+      {include tr_part('product-card')}
+    {/while}
+    {wp_reset_postdata()}
+    
+  </section>
+    
+</aside>

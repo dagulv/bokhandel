@@ -1,0 +1,87 @@
+{
+  "block_meta": {
+    "BLOCK_REGISTER_NAME": "slider-hero",
+    "BLOCK_TITLE": "Slider Hero",
+    "keywords": [
+      "slide, hero"
+    ],
+    "hasSidebar": true,
+    "hasExample": true
+  },
+  "attributes": {
+    "slider": {
+      "type": "array",
+      "field_meta": {
+        "type": "repeater",
+        "label": "Slider",
+        "subfields": {
+          "label": {
+            "type": "object",
+            "field_meta": {
+              "type": "text",
+              "label": "Beskrivande text"
+            },
+            "default": {
+              "text": ""
+            }
+          },
+          "title": {
+            "type": "object",
+            "field_meta": {
+              "type": "text",
+              "label": "Titel"
+            },
+            "default": {
+              "text": ""
+            }
+          },
+          "description": {
+            "type": "object",
+            "field_meta": {
+              "type": "text",
+              "label": "Beskrivning"
+            },
+            "default": {
+              "text": ""
+            }
+          },
+          "cta": {
+            "type": "object",
+            "field_meta": {
+              "type": "cta",
+              "label": "Slide innehåll"
+            },
+            "default": {
+              "title": "",
+              "url": "",
+              "target": false
+            }
+          },
+          "heroImg": {
+            "type": "object",
+            "field_meta": {
+              "type": "image",
+              "label": "Herobild"
+            },
+            "default": {
+              "src": "",
+              "id": null
+            }
+          },
+          "bg": {
+            "type": "object",
+            "field_meta": {
+              "type": "image",
+              "label": "Bakgrund"
+            },
+            "default": {
+              "src": "",
+              "id": null
+            }
+          }
+        }
+      },
+      "default": []
+    }
+  }
+}

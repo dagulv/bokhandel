@@ -1,0 +1,14 @@
+<section n:if="!empty($slider)" class="hero-slider hero-slider__snap hero-slider--landing hero-slider--effects">
+  <div n:foreach="$slider as $slide" class="hero-slide">
+      <div class="hero-slide-content">
+          
+          <div class="hero-slide-content__text">
+              <h2 n:ifcontent class="hero-slide-content__title title font-xxl">{$slide['title']['text']} <span class="title title--colored"></span></h2>
+              {tr_a($slide['cta'], 'title btn btn--brand btn--round btn--main')}
+          </div>
+          
+      </div>
+      <img class="img img--hero-slide" src="{tr_get_media_path($slide['bg'])}" alt="">
+      {* <img class="img img--hero-slide" src="../images/esports/hero-hero-slider/hero-bg-1.jpg" alt=""> *}
+  </div>
+</section>

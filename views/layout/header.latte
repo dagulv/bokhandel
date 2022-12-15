@@ -1,0 +1,29 @@
+<!doctype html>
+<html {language_attributes()|noescape}>
+
+<head>
+	<meta charset="{bloginfo('charset')}">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+	<link rel="profile" href="https://gmpg.org/xfn/11">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;700&family=Open+Sans&display=swap" rel="stylesheet">
+
+	{wp_head()}
+	<style id="critical-css" type="text/css">
+		{file_get_contents(get_template_directory() . '/prod/global/critical.css')|noescape}
+	</style>
+
+	<link rel="preload" href="{get_template_directory_uri()}/prod/global/style.css" as="style">
+	<link rel="stylesheet" href="{get_template_directory_uri()}/prod/global/style.css">
+
+	<script type="text/javascript">
+		var tr_theme_url = {get_bloginfo("template_url")};
+		var tr_site_url = {esc_url( home_url( '/' ) )};
+	</script>
+</head>
+
+<body {body_class()|noescape}>
+  {include tr_view_path('/layout/main-menu')}
+	<main class="main-content {tr_is_ie() ? 'main_is_ie' : ''}">

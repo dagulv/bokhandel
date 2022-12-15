@@ -1,0 +1,31 @@
+// cards css here
+.card {
+    position: relative;
+
+    overflow: hidden;
+    border-radius: 0.2rem;
+    border: 1px solid var(--border-main);
+    background-color: #34126F;
+}
+
+.card__header {
+    position: relative;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #421987;
+    border-bottom: 1px solid var(--border-main);
+}
+
+.product-list-card {
+    display: flex;
+    padding: 1rem;
+}
+.product-list-card__thumb {
+    min-width: 60px;
+}
+.product-list-card__thumb__img {
+    object-fit: cover;
+}

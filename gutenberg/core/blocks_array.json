@@ -1,0 +1,10 @@
+{
+  "blocks_array": [
+    "image",
+    "video",
+    "breadcrumbs",
+    "hero",
+    "slider-hero",
+    "sidebar"
+  ]
+}
